@@ -1,0 +1,40 @@
+# Dependencies and local runtime state
+node_modules/
+.wrangler/
+.backup/
+.notes/
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Generated Android/Capacitor output
+android/.gradle/
+android/**/build/
+android/local.properties
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/app/src/main/res/xml/config.xml
+*.apk
+*.aab
+*.aar
+*.dex
+*.class
+*.keystore
+*.jks
+
+# Local Firebase web-app configuration (use the checked-in example template)
+/public/firebase-auth-client.js
+
+# Build packages, logs, and local deliverables
+/artifacts/
+/deliverables/*.zip
+/deliverables/*.apk
+/deliverables/*.aab
+/deliverables/*.png
+*.log
+
+# Local screenshots and previews
+/final-*.png
+/thaibro-*.png

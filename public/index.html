@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1A2B49">
+  <meta name="description" content="News, jobs, and practical support for Myanmar friends living in Thailand.">
+  <title>Thai Bro — Your friend in Thailand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app.css?v=20261012-analytics-views">
+  <link rel="stylesheet" href="/social.css?v=20261012-analytics-views">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="masthead" id="site-header">
+      <div class="brand-row">
+        <button id="drawer-toggle" class="top-icon-button menu-toggle" type="button" aria-label="မီနူးဖွင့်ရန်" data-i18n-aria-label="openMenuLabel" aria-expanded="false" aria-controls="app-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+        </button>
+        <a class="brand" href="#top" aria-label="Thai Bro Home"><span class="brand-mark"><img src="/images/thaibro-logo.jpg" alt="" aria-hidden="true"></span><span>Thai Bro</span></a>
+        <div class="top-actions">
+          <button id="search-toggle" class="top-icon-button" type="button" aria-label="Search" aria-expanded="false" aria-controls="search-panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.2"/><path d="m16 16 4.5 4.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="search-panel" class="search-panel" hidden>
+        <form id="search-form" class="search-wrap" role="search">
+          <div class="search-field">
+            <label class="visually-hidden" for="search" data-i18n="searchLabel">သတင်းနှင့် အလုပ် ရှာရန်</label>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.2"/><path d="m16 16 4.5 4.5" stroke-linecap="round"/></svg>
+            <input id="search" class="search" type="search" autocomplete="off" enterkeyhint="search" placeholder="သတင်း၊ အလုပ်အကိုင် ရှာမယ်…" aria-label="သတင်းနှင့် အလုပ် ရှာရန်" data-i18n-placeholder="searchPlaceholder" data-i18n-aria-label="searchLabel">
+            <button id="search-close" class="search-close" type="button" aria-label="Close search">×</button>
+          </div>
+          <button id="search-submit" class="search-submit" type="submit" aria-label="Search" data-i18n-aria-label="searchLabel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.2"/><path d="m16 16 4.5 4.5" stroke-linecap="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </header>
+    <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+    <aside id="app-drawer" class="app-drawer" aria-label="အဓိက မီနူး" data-i18n-aria-label="drawerLabel" aria-hidden="true" inert>
+      <div class="drawer-profile">
+        <button id="drawer-close" class="drawer-close" type="button" aria-label="Close menu" data-i18n-aria-label="closeMenuLabel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="guest-avatar" aria-hidden="true"><img src="/images/thaibro-logo.jpg" alt=""></div>
+        <strong data-i18n="drawerWelcome">Welcome to Thai Bro</strong>
+        <span data-i18n="drawerGuestCopy">Browse freely — no account required.</span>
+      </div>
+      <nav class="drawer-menu" aria-label="မီနူး" data-i18n-aria-label="drawerNavigation">
+        <details class="drawer-group">
+          <summary class="drawer-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.5.9L16 20.5h-3l-.3-1.7a8 8 0 0 1-1.5-.9l-1.7.7-1.4-2.4 1.4-1.1A7 7 0 0 1 9.5 13L8 11.8l1.4-2.4 1.7.7a8 8 0 0 1 1.5-.9L13 7.5h3l.3 1.7a8 8 0 0 1 1.5.9l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1-.1 2.1z" transform="translate(-1 -2)"/></svg><span data-i18n="settingsMenu">ဆက်တင်များ</span><span class="drawer-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="drawer-submenu">
+            <button id="drawer-open-settings" class="drawer-sub-action" type="button" data-i18n="openSettings">ဆက်တင်များကို ကြည့်ရန်</button>
+            <div class="drawer-language"><span data-i18n="languageTitle">ဘာသာစကား</span><div class="language-switch" role="group" aria-label="Language"><button class="language-option" type="button" data-language="my" aria-pressed="true">မြန်မာ 🇲🇲</button><button class="language-option" type="button" data-language="en" aria-pressed="false">English 🇺🇸</button></div></div>
+            <div class="drawer-theme"><span><strong data-i18n="themeTitle">လင်း/မှောင်စနစ်</strong><small data-i18n="themeHelp">သင့်မျက်နှာပြင်အတွက် အလင်း သို့မဟုတ် အမှောင် ရွေးပါ</small></span><button id="drawer-theme-toggle" class="switch-control" type="button" role="switch" aria-checked="false" aria-label="လင်း/မှောင်စနစ်" data-i18n-aria-label="themeTitle"><span class="switch-knob"></span></button></div>
+            <button id="drawer-notification-settings" class="drawer-sub-action" type="button" data-i18n="notificationSettings">အသိပေးချက်များ</button>
+          </div>
+        </details>
+        <button id="drawer-saved" class="drawer-item" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-3.5L6 21z"/></svg><span data-i18n="savedPosts">သိမ်းထားသော ပို့စ်များ</span></button>
+        <button id="drawer-sos" class="drawer-item" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 21 20H3z"/><path d="M12 9v5m0 3h.01"/></svg><span data-i18n="sosSettings">SOS အရေးပေါ် အကူအညီများ</span><span class="drawer-emergency" data-i18n="emergency">အရေးပေါ်</span></button>
+        <button id="drawer-help" class="drawer-item" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 1 1 4.5 1.5c-.9 1-2.1 1.2-2.1 2.8M12 17h.01"/></svg><span data-i18n="helpTitle">အကူအညီနှင့် ထောက်ပံ့မှု</span></button>
+        <button id="drawer-about" class="drawer-item" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg><span data-i18n="aboutThaiBro">Thai Bro အကြောင်း</span></button>
+      </nav>
+      <p class="drawer-footer">Thai Bro · <span data-i18n="communityTagline">ယုံကြည်စိတ်ချရသော အသိုင်းအဝိုင်း လမ်းညွှန်</span></p>
+    </aside>
+
+    <main id="top" class="main-surface">
+      <section id="home-view" class="feed-view">
+        <div class="feed-head social-feed-head">
+          <div><h1 data-i18n="homeHeading">Thai Bro မှာ ဘာတွေဖြစ်နေလဲ</h1><p class="feed-caption" data-i18n="homeCaption">သတင်းနဲ့ အလုပ်အကိုင်အသစ်တွေကို တစ်နေရာတည်းမှာ ကြည့်ပါ။</p></div>
+          <button id="home-refresh" class="refresh" type="button" aria-label="Refresh feed">↻</button>
+        </div>
+        <div id="home-list" class="story-list social-feed" aria-live="polite" aria-busy="true"></div>
+        <p class="fine-print" data-i18n="sourceReminder">သတင်းတိုင်းအတွက် မူရင်းရင်းမြစ်ကို ဖွင့်ကြည့်နိုင်ပါတယ်။</p>
+      </section>
+
+      <section id="news-panel" class="feed-view" role="tabpanel" aria-labelledby="news-heading" hidden>
+        <div id="personalized-news" class="personalized-slot"></div>
+        <div class="feed-head">
+          <div><h1 id="news-heading" data-i18n="latestNews">နောက်ဆုံးသတင်းများ</h1><p class="feed-caption" data-i18n="newsCaption">ယုံကြည်ရတဲ့ ရင်းမြစ်က သတင်းတွေကို အကိုက စုစည်းထားတယ်။ ၁၅ မိနစ်တစ်ကြိမ် အသစ်စစ်ဆေးသည်။</p></div>
+          <div class="feed-tools"><span id="feed-status" class="feed-status" aria-live="polite"><i class="status-dot"></i><span id="feed-status-text">သတင်းတင်နေတယ်…</span></span><button id="refresh" class="refresh" type="button" aria-label="Refresh news">↻</button></div>
+        </div>
+        <div id="news-list" class="story-list social-feed" aria-live="polite" aria-busy="true"></div>
+        <p class="fine-print" data-i18n="sourceReminder">သတင်းတိုင်းအတွက် မူရင်းရင်းမြစ်ကို ဖွင့်ကြည့်နိုင်ပါတယ်။</p>
+      </section>
+
+      <section id="jobs-panel" class="feed-view job-content" role="tabpanel" aria-labelledby="jobs-heading" hidden>
+        <div id="personalized-jobs" class="personalized-slot"></div>
+        <div class="feed-head">
+          <div><h1 id="jobs-heading" data-i18n="latestJobs">အလုပ်အကိုင်အသစ်များ</h1><p class="feed-caption" data-i18n="jobsCaption">လစာ၊ နေရာနဲ့ ဆက်သွယ်ရန်ကို မစခင် အရင်စစ်ပါ ညီ/ညီမ။</p></div>
+          <div class="feed-tools"><span id="jobs-status" class="feed-status" aria-live="polite"><i class="status-dot"></i><span id="jobs-status-text">အလုပ်တင်နေတယ်…</span></span><button id="jobs-refresh" class="refresh" type="button" aria-label="Refresh jobs">↻</button></div>
+        </div>
+        <div id="jobs-list" class="story-list social-feed" aria-live="polite" aria-busy="true"></div>
+        <aside class="job-safety"><div class="safety-icon">✓</div><div><strong data-i18n="jobSafetyTitle">အလုပ်လက်ခံမီ အကို့စကားလေး</strong><p data-i18n="jobSafetyBody">အလုပ်ရဖို့ ငွေကြိုမပေးပါနဲ့။ စာချုပ်၊ လစာ၊ နားရက်နဲ့ အလုပ်လုပ်ခွင့်ကို စစ်ပြီးမှ ဆုံးဖြတ်ပါ။</p><a href="https://ไทยมีงานทำ.doe.go.th/" target="_blank" rel="noopener noreferrer" data-i18n="officialJobs">တရားဝင် အလုပ်စာရင်းကို စစ်ကြည့်မယ် ↗</a></div></aside>
+      </section>
+
+      <section id="notifications-panel" class="feed-view notifications-view" hidden aria-labelledby="notifications-heading">
+        <div class="feed-head"><div><h1 id="notifications-heading" data-i18n="notificationsHeading">အသိပေးချက်များ</h1><p class="feed-caption" data-i18n="notificationsCaption">အရေးကြီးတဲ့ အပ်ဒိတ်တွေကို ဒီနေရာမှာ ကြည့်ပါ။</p></div></div>
+        <div class="empty-state notification-empty" role="status"><div class="notification-empty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></div><strong data-i18n="noNotificationsTitle">အသိပေးချက် မရှိသေးပါ</strong><p data-i18n="noNotifications">အသိပေးချက်စနစ်ကို မဖွင့်ရသေးပါ။</p></div>
+      </section>
+
+      <section id="profile-view" class="page-view profile-view" hidden>
+        <div id="profile-settings">
+          <div class="page-heading profile-top-heading"><button id="profile-back" class="back-button" type="button" aria-label="နောက်သို့" data-i18n-aria-label="back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6"/></svg><span data-i18n="back">နောက်သို့</span></button><p class="eyebrow" data-i18n="menuLabel">MENU</p><h1 data-i18n="profileHeading">ကိုယ်ရေးနှင့် ဆက်တင်များ</h1><p data-i18n="profileIntro">ဘာသာစကား၊ အကူအညီနဲ့ အက်ပ်ဆိုင်ရာ ရွေးချယ်မှုများကို စီမံပါ။</p></div>
+          <section class="settings-card">
+            <div class="settings-title"><span class="settings-icon">文</span><div><strong data-i18n="languageTitle">Language / ဘာသာစကား</strong><small data-i18n="languageHelp">အက်ပ်အင်တာဖေ့စ် ဘာသာစကားရွေးပါ</small></div></div>
+            <div class="language-switch" role="group" aria-label="Language">
+              <button class="language-option" type="button" data-language="my" aria-pressed="true">မြန်မာ 🇲🇲</button>
+              <button class="language-option" type="button" data-language="en" aria-pressed="false">English 🇺🇸</button>
+            </div>
+          </section>
+          <section class="settings-card theme-setting"><div class="settings-title"><span class="settings-icon theme-icon">◐</span><div><strong data-i18n="themeTitle">လင်း/မှောင်စနစ်</strong><small data-i18n="themeHelp">သင့်မျက်နှာပြင်အတွက် အလင်း သို့မဟုတ် အမှောင် ရွေးပါ</small></div></div><button id="theme-toggle" class="switch-control" type="button" role="switch" aria-checked="false" aria-label="လင်း/မှောင်စနစ်" data-i18n-aria-label="themeTitle"><span class="switch-knob"></span></button></section>
+          <a class="settings-row sos-settings-link" href="#sos-content"><span class="settings-icon sos-settings-icon">SOS</span><span class="settings-row-copy"><strong data-i18n="sosSettings">SOS အရေးပေါ် အကူအညီများ</strong><small data-i18n="sosHelp">သံရုံး · ရဲ · ဆေးဘက် · အလုပ်သမားအခွင့်အရေး</small></span><span class="settings-badge" data-i18n="emergency">အရေးပေါ်</span><span class="settings-chevron">›</span></a>
+          <button id="settings-help" class="settings-row" type="button"><span class="settings-icon help-settings-icon">?</span><span class="settings-row-copy"><strong data-i18n="helpTitle">အကူအညီနှင့် ထောက်ပံ့မှု</strong><small data-i18n="helpIntroShort">အက်ပ်အသုံးပြုနည်းနှင့် လမ်းညွှန်ချက်များ</small></span><span class="settings-chevron">›</span></button>
+          <button id="notification-settings" class="settings-row" type="button"><span class="settings-icon">♧</span><span class="settings-row-copy"><strong data-i18n="notificationSettings">အသိပေးချက်များ</strong><small data-i18n="notificationSettingsHelp">အသိပေးချက်လက်ခံမှုကို စီမံရန်</small></span><span class="settings-chevron">›</span></button>
+          <button id="saved-shortcut" class="settings-row" type="button"><span class="settings-icon">▱</span><span class="settings-row-copy"><strong data-i18n="savedPosts">သိမ်းထားသော ပို့စ်များ</strong><small data-i18n="savedHelp">သိမ်းထားသည့်အကြောင်းအရာများကို ပြန်ကြည့်ရန်</small></span><span class="settings-chevron">›</span></button>
+          <section class="profile-card" id="profile-preference-card"><div><span class="eyebrow" data-i18n="personalize">Personalize your feed</span><strong id="profile-summary">All topics</strong><p id="profile-preference-copy" data-i18n="profileStored">Your topic preference is saved only on this device.</p></div><button id="clear-profile" class="button-secondary" type="button" data-i18n="clearPreference" hidden>Show all topics</button></section>
+          <section class="about-box" id="about-card" aria-labelledby="about-heading">
+            <h2 id="about-heading" data-i18n="aboutThaiBro">About Thai Bro</h2>
+            <details class="about-accordion" name="about-sections">
+              <summary><span data-i18n="aboutUsHeading">About us</span><span class="about-chevron" aria-hidden="true">⌄</span></summary>
+              <div class="about-accordion-panel"><p data-i18n="aboutUsCopy">Think of me as your friend in Thailand. I’ll share what I know, and when I don’t have the answer, I’ll look it up and find it for you.</p></div>
+            </details>
+            <details class="about-accordion" name="about-sections">
+              <summary><span data-i18n="aboutFeaturesHeading">What you’ll find here</span><span class="about-chevron" aria-hidden="true">⌄</span></summary>
+              <div class="about-accordion-panel"><p data-i18n="aboutFeaturesCopy">Helpful news, job listings, and practical support for everyday life in Thailand—all gathered in one friendly place.</p></div>
+            </details>
+            <details class="about-accordion" name="about-sections">
+              <summary><span data-i18n="aboutNoteHeading">A helpful note</span><span class="about-chevron" aria-hidden="true">⌄</span></summary>
+              <div class="about-accordion-panel"><p data-i18n="aboutDisclaimer">Thai Bro is an independent community guide, not a government website or legal adviser. Please confirm important details with the relevant authority.</p></div>
+            </details>
+          </section>
+        </div>
+        <section id="sos-view" class="profile-sos">
+          <div class="page-heading" id="sos-content"><button id="sos-back" class="back-button" type="button" aria-label="နောက်သို့" data-i18n-aria-label="back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6"/></svg><span data-i18n="back">နောက်သို့</span></button><p class="eyebrow" data-i18n="emergencyHelp">အရေးပေါ်အချိန်မှာ</p><h2 data-i18n="sosHeading">SOS / အကူအညီလမ်းညွှန်</h2><p data-i18n="sosIntro">အရေးပေါ်အခြေအနေဆိုရင် အခုချက်ချင်း ခေါ်ပါ။ မသေချာရင် အနီးနားက ယုံကြည်ရသူကိုပါ အသိပေးပါ။</p></div>
+          <div class="emergency-callout"><strong data-i18n="medicalEmergency">အသက်အန္တရာယ် သို့မဟုတ် ဆေးဘက်အရေးပေါ်လား?</strong><p data-i18n="callEmergency">ထိုင်းအရေးပေါ်နံပါတ်ကို အခုခေါ်ပါ။</p><a class="call-primary" href="tel:1669"><span data-i18n="medicalHelp">ဆေးဘက်အရေးပေါ်</span><b>1669 ကိုခေါ်ရန်</b></a></div>
+          <h2 class="section-title" data-i18n="emergencyNumbers">အရေးပေါ်နှင့် အကူအညီဖုန်းများ</h2>
+          <div class="contact-grid">
+            <article class="contact-card contact-danger"><div class="contact-icon">!</div><div class="contact-copy"><span class="contact-kind">ရဲတပ်ဖွဲ့ · အရေးပေါ်</span><h3>ထိုင်းရဲတပ်ဖွဲ့</h3><p>အရေးပေါ် ရဲအကူအညီ</p></div><a class="call-button" href="tel:191" aria-label="ထိုင်းရဲတပ်ဖွဲ့ 191 ကိုခေါ်ရန်">191 <span>ခေါ်မယ်</span></a></article>
+            <article class="contact-card"><div class="contact-icon">☎</div><div class="contact-copy"><span class="contact-kind">ခရီးသွားရဲ</span><h3>Tourist Police</h3><p>ခရီးသွားရဲ အရေးပေါ်အကူအညီ</p></div><a class="call-button" href="tel:1155" aria-label="Tourist Police 1155 ကိုခေါ်ရန်">1155 <span>ခေါ်မယ်</span></a></article>
+            <article class="contact-card"><div class="contact-icon">✚</div><div class="contact-copy"><span class="contact-kind">လူနာတင်ယာဉ် · ဆေးရုံ</span><h3>အရေးပေါ်ဆေးဘက်အကူအညီ</h3><p>လူနာတင်ယာဉ်နဲ့ ဆေးဘက်အရေးပေါ်</p></div><a class="call-button" href="tel:1669" aria-label="ဆေးဘက်အရေးပေါ် 1669 ကိုခေါ်ရန်">1669 <span>ခေါ်မယ်</span></a></article>
+            <article class="contact-card"><div class="contact-icon">MM</div><div class="contact-copy"><span class="contact-kind">မြန်မာသံရုံး · ဘန်ကောက်</span><h3>မြန်မာသံရုံး</h3><p>ကောင်စစ်နှင့် နိုင်ငံသားဆိုင်ရာအကူအညီ</p></div><a class="call-button" href="tel:+6622340320" aria-label="မြန်မာသံရုံးကို ဖုန်းခေါ်ရန်">ခေါ်မယ်</a><a class="contact-source" href="https://www.mebangkok.org/contact-us.html" target="_blank" rel="noopener noreferrer">နံပါတ်များ ↗</a></article>
+            <article class="contact-card"><div class="contact-icon">⚒</div><div class="contact-copy"><span class="contact-kind">မြန်မာအလုပ်သမားအရေး</span><h3>အလုပ်သမားရေးရာ ဖုန်းဆက်သွယ်ရေး</h3><p>မြန်မာသံရုံး အလုပ်သမားဌာန · Call Center</p></div><a class="call-button" href="tel:+66626262143" aria-label="အလုပ်သမားရေးရာ call center ကိုခေါ်ရန်">ခေါ်မယ်</a><a class="contact-source" href="https://www.mebangkok.org/labour-contact.html" target="_blank" rel="noopener noreferrer">နံပါတ်များ ↗</a></article>
+            <article class="contact-card"><div class="contact-icon">MAP</div><div class="contact-copy"><span class="contact-kind">ရွှေ့ပြောင်းလုပ်သားအကူအညီ · ချင်းမိုင်</span><h3>MAP Foundation</h3><p>ရွှေ့ပြောင်းလုပ်သားအခွင့်အရေးနှင့် ဝန်ဆောင်မှုများ</p></div><a class="call-button" href="tel:+6653328134" aria-label="MAP Foundation 053 328 134 ကိုခေါ်ရန်">ခေါ်မယ်</a><a class="contact-source" href="https://mapfoundationcm.org/en/contact.html" target="_blank" rel="noopener noreferrer">ဝဘ်ဆိုက် ↗</a></article>
+          </div>
+          <p class="contact-caveat">ဖုန်းနံပါတ်နဲ့ ဝန်ဆောင်ချိန်တွေ ပြောင်းနိုင်ပါတယ်။ မခေါ်ခင် သက်ဆိုင်ရာအဖွဲ့ရဲ့ မူရင်းစာမျက်နှာမှာ ပြန်စစ်ပါ။ နံပါတ်များကို ၂၀၂၆ အောက်တိုဘာတွင် စစ်ဆေးထားသည်။</p>
+          <h2 class="section-title guide-title">လိုအပ်တာကို တစ်ဆင့်ချင်းလုပ်ကြမယ်</h2>
+          <div class="guide-grid">
+            <details class="guide-card"><summary><span class="guide-number">01</span><span><strong>Passport သက်တမ်းတိုးရန်</strong><small>သံရုံးနဲ့ ရက်ချိန်းကို အရင်စစ်ပါ</small></span><span class="guide-chevron">+</span></summary><ol><li>Passport သက်တမ်းကုန်မည့်ရက်ကို ကြည့်ပြီး အချိန်မီ စတင်ပြင်ဆင်ပါ။</li><li>မြန်မာသံရုံး၏ တရားဝင်ဝဘ်ဆိုက် သို့မဟုတ် ဖုန်းကတစ်ဆင့် လက်ရှိလိုအပ်ချက်၊ ရက်ချိန်း၊ အခကြေးငွေကို အတည်ပြုပါ။</li><li>သံရုံးက တောင်းထားသော မူရင်းစာရွက်စာတမ်းနှင့် မိတ္တူများကိုသာ ပြင်ဆင်ပါ။ အချက်အလက်ဟောင်းကို မမှီခိုပါနဲ့။</li><li>စာရွက်စာတမ်းကို မသိတဲ့ပွဲစားထံ မအပ်ပါနဲ့။ ပေးငွေတိုင်းအတွက် တရားဝင်ပြေစာယူပါ။</li></ol><a href="https://www.mebangkok.org/" target="_blank" rel="noopener noreferrer">သံရုံးဝဘ်ဆိုက်ကိုဖွင့်ရန် ↗</a></details>
+            <details class="guide-card"><summary><span class="guide-number">02</span><span><strong>အလုပ်လုပ်ခွင့် သက်တမ်းတိုးရန်</strong><small>အလုပ်ရှင်နဲ့ တာဝန်ရှိဌာနကို အတည်ပြုပါ</small></span><span class="guide-chevron">+</span></summary><ol><li>လက်ရှိ work permit နဲ့ သက်ဆိုင်ရာခွင့်ပြုချက် သက်တမ်းကုန်မည့်ရက်ကို မှတ်ထားပါ။</li><li>အလုပ်ရှင်/လူ့စွမ်းအားအရင်းအမြစ်ဌာနကို စောစောဆက်သွယ်ပြီး ဘယ်ဌာန၊ ဘယ်လုပ်ငန်းစဉ်နဲ့ ဆောင်ရွက်မယ်ဆိုတာ အတည်ပြုပါ။</li><li>လက်ရှိစာရွက်စာတမ်းစာရင်း၊ ကုန်ကျစရိတ်နဲ့ အချိန်ကာလကို ထိုင်းအလုပ်အကိုင်ဌာန (DOE) သို့မဟုတ် သက်ဆိုင်ရာရုံးမှာ ထပ်စစ်ပါ။</li><li>ပေးငွေတိုင်းအတွက် ပြေစာသိမ်းပါ။ စာရွက်အလွတ်၊ မမှန်ကန်တဲ့စာရွက် သို့မဟုတ် မရှင်းလင်းတဲ့ငွေတောင်းခံမှုကို လက်မခံပါနဲ့။</li></ol><a href="https://www.doe.go.th/" target="_blank" rel="noopener noreferrer">ထိုင်းအလုပ်အကိုင်ဌာနကိုဖွင့်ရန် ↗</a></details>
+          </div>
+          <p class="legal-note">ဒီအချက်အလက်တွေက အထွေထွေလမ်းညွှန်ပါ။ ကိုယ့်အခြေအနေ၊ စည်းမျဉ်းနဲ့ နောက်ဆုံးလိုအပ်ချက်ကို သက်ဆိုင်ရာရုံးမှာ အတည်ပြုပြီးမှ လုပ်ဆောင်ပါ။</p>
+        </section>
+        <section id="help-view" class="profile-subpage" hidden><div class="page-heading"><button id="help-back" class="back-button" type="button" aria-label="နောက်သို့" data-i18n-aria-label="back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6"/></svg><span data-i18n="back">နောက်သို့</span></button><p class="eyebrow">THAI BRO</p><h1 data-i18n="helpTitle">အကူအညီနှင့် ထောက်ပံ့မှု</h1><p data-i18n="helpIntro">Thai Bro ကို အသုံးပြုရာတွင် လိုအပ်သော လမ်းညွှန်ချက်များကို ဤနေရာတွင် ကြည့်နိုင်ပါသည်။</p></div>
+          <article class="help-card"><span class="help-icon">01</span><div><h2 data-i18n="helpFeedTitle">သတင်းနှင့် အလုပ်ကို ကြည့်ရှုရန်</h2><p data-i18n="helpFeedBody">ပင်မ၊ သတင်းနှင့် အလုပ် တက်ဘ်များကို အသုံးပြုပြီး နောက်ဆုံးအပ်ဒိတ်များကို ကြည့်ပါ။ ရှာဖွေရန် အပေါ်ဘက်ရှိ မှန်ဘီလူးကို နှိပ်ပါ။</p></div></article>
+          <article class="help-card"><span class="help-icon">02</span><div><h2 data-i18n="helpJobsTitle">အလုပ်အကိုင် လုံခြုံရေး</h2><p data-i18n="helpJobsBody">အကိုစစ်ဆေးထားသည်ဟု ဖော်ပြထားခြင်းသည် Thai Bro ၏ စစ်ဆေးချက်သာဖြစ်ပြီး အစိုးရအာမခံချက် မဟုတ်ပါ။ ငွေကြိုမပေးပါနှင့်။</p></div></article>
+          <article class="help-card"><span class="help-icon help-danger">!</span><div><h2 data-i18n="helpEmergencyTitle">အရေးပေါ် အကူအညီ</h2><p data-i18n="helpEmergencyBody">အရေးပေါ်အချိန်တွင် SOS စာမျက်နှာမှ ထိုင်းနိုင်ငံ၏ ဖုန်းနံပါတ်များနှင့် ဆက်သွယ်ရန်ရင်းမြစ်များကို ကြည့်ပါ။</p><button id="help-open-sos" class="help-action" type="button" data-i18n="openEmergencyHelp">SOS အကူအညီကို ဖွင့်ရန်</button></div></article>
+          <article class="help-card"><span class="help-icon">?</span><div><h2 data-i18n="helpAccountTitle">အကောင့်နှင့် အကူအညီ</h2><p data-i18n="helpAccountBody">You can browse Thai Bro freely—no account is needed.</p></div></article>
+        </section>
+        <section id="saved-view" class="profile-saved" hidden><div class="saved-header"><div><button id="saved-back" class="back-button" type="button" aria-label="နောက်သို့" data-i18n-aria-label="back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6"/></svg><span data-i18n="back">နောက်သို့</span></button><p class="eyebrow" data-i18n="savedPosts">သိမ်းထားသော ပို့စ်များ</p><h2 data-i18n="savedHeading">သိမ်းထားတဲ့အကြောင်းအရာ</h2></div></div><p class="feed-caption" data-i18n="savedReadOnly">ဧည့်သည်အဖြစ် သိမ်းဆည်းမှုလုပ်ဆောင်ချက်ကို မဖွင့်ရသေးပါ။</p><div id="saved-list" class="story-list social-feed"></div></section>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" id="primary-tabs" aria-label="အဓိက လမ်းညွှန်" data-i18n-aria-label="mainNavigation">
+      <button class="nav-button" type="button" data-view="home" aria-current="page" aria-label="ပင်မ" data-i18n-aria-label="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-outline" d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/><path class="icon-filled" d="m2 10 10-8 10 8v10a2 2 0 0 1-2 2h-5v-7H9v7H4a2 2 0 0 1-2-2z"/></svg><span data-i18n="home">ပင်မ</span></button>
+      <button class="nav-button" type="button" data-view="news" aria-label="သတင်း" data-i18n-aria-label="news"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-outline" d="M5 4h15v16H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm3 4h8M8 12h9M8 16h6"/><path class="icon-filled" d="M5 3h15a1 1 0 0 1 1 1v16H5a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zm3 4v2h9V7zm0 5v2h9v-2zm0 4v2h6v-2z"/></svg><span data-i18n="news">သတင်း</span></button>
+      <button class="nav-button" type="button" data-view="jobs" aria-label="အလုပ်" data-i18n-aria-label="jobs"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-outline" d="M3 7h18v13H3zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18m-11 0v2h4v-2"/><path class="icon-filled" d="M8 3h8a2 2 0 0 1 2 2v2h3v13H3V7h3V5a2 2 0 0 1 2-2zm0 4h8V5H8zm2 5v3h4v-3z"/></svg><span data-i18n="jobs">အလုပ်</span></button>
+      <button class="nav-button" type="button" data-view="notifications" aria-label="အသိပေးချက်များ" data-i18n-aria-label="notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-outline" d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/><path class="icon-filled" d="M12 2a6 6 0 0 0-6 6c0 6.5-3 7-3 9h18c0-2-3-2-3-9a6 6 0 0 0-6-6zm-2 17a2 2 0 0 0 4 0z"/></svg><span data-i18n="notifications">အသိပေးချက်များ</span></button>
+    </nav>
+
+    <section id="welcome-overlay" class="welcome-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+      <div class="welcome-card">
+        <div class="welcome-visual">
+          <div class="welcome-brand-lockup"><span class="welcome-brand-mark"><img src="/images/thaibro-logo.jpg" alt=""></span><span>Thai Bro</span></div>
+          <span class="welcome-sparkle welcome-sparkle-one" aria-hidden="true">✦</span>
+          <span class="welcome-sparkle welcome-sparkle-two" aria-hidden="true">✧</span>
+          <img class="welcome-illustration" src="/images/welcome-tuk-tuk-display.png" alt="A blue Thai tuk-tuk with a travel suitcase">
+        </div>
+        <div class="welcome-copy">
+          <p class="welcome-eyebrow" data-i18n="welcomeEyebrow">A little help goes a long way</p>
+          <h1 id="welcome-title" data-i18n="welcomeTitle">Your friend in Thailand.</h1>
+          <p class="welcome-intro" data-i18n="welcomeIntro">News, jobs, and everyday support to help you feel at home.</p>
+          <button id="welcome-start" class="welcome-continue" type="button"><span data-i18n="welcomeStart">Start</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          <p class="welcome-note" data-i18n="welcomeNote">Here for you, wherever your journey takes you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="detail-view" class="detail-overlay" role="dialog" aria-modal="true" aria-labelledby="detail-title" hidden>
+      <div class="detail-shell">
+        <div class="detail-topbar"><strong>Thai Bro · <span data-i18n="broGuide">အကို့လမ်းညွှန်</span></strong><button id="detail-close" class="detail-close" type="button" aria-label="Close">×</button></div>
+        <img id="detail-cover" class="detail-cover" alt="">
+        <article class="detail-content"><div class="detail-label-row"><span id="detail-category" class="story-label"></span><span id="detail-verified" class="verified-badge" hidden>✓ Bro က စစ်ဆေးထားသည်</span></div><h1 id="detail-title" class="detail-title"></h1><div class="detail-meta"><time id="detail-date"></time><i class="meta-dot"></i><a id="detail-source" class="detail-source" href="#" target="_blank" rel="noopener noreferrer" hidden></a></div><div id="detail-warning" class="detail-warning" hidden>⚠ အကို့သတိပေးချက် · ငွေကြိုတောင်းမှုနဲ့ ကိုယ်ရေးစာရွက်စာတမ်းတောင်းမှုကို သေချာစစ်ပါ။</div><p id="detail-summary" class="detail-summary" hidden></p><div id="detail-contact" class="detail-contact"></div><div id="detail-body" class="detail-body"></div><section id="detail-source-full" class="detail-source-full hidden"></section></article>
+        <div class="detail-actions"><button id="detail-like" class="detail-action" type="button" aria-pressed="false"><span class="action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 10.1-8.8 10.1S3.2 14 3.2 8.8A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 8.8 1.7Z"/></svg></span><span data-i18n="like">Like</span><span id="like-count">0</span></button><button id="detail-comment" class="detail-action" type="button"><span class="action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 9 9 0 0 1-4-.9L4 20l1.3-3.2A7 7 0 0 1 4 12c0-4.2 3.6-7.5 8-7.5s8 3.1 8 7Z"/></svg></span><span data-i18n="comment">Comment</span></button><button id="detail-bookmark" class="detail-action" type="button" aria-pressed="false"><span class="action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-3.5L6 21z"/></svg></span><span data-i18n="save">Save</span></button></div>
+        <section class="detail-comments"><h2 id="detail-comments-heading" data-i18n="communityComments">Community comments</h2><p class="comments-helper" data-i18n="commentHelp">Comments are read-only for now.</p><ul id="comment-list" class="comment-list" aria-live="polite"></ul></section>
+      </div>
+    </section>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+  </div>
+  <div id="pull-indicator" class="pull-indicator" role="status" aria-live="polite" aria-busy="false" hidden><span class="refresh-spinner" aria-hidden="true"></span><span id="pull-indicator-text">လွှတ်လိုက်ရင် အသစ်ပြန်စစ်မယ်</span></div>
+  <script src="/app.js?v=20261012-analytics-views" defer></script>
+</body>
+</html>

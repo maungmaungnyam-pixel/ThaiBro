@@ -1,0 +1,12 @@
+{
+  "appId": "com.thaibro.mobile",
+  "appName": "ThaiBro",
+  "webDir": "public",
+  "loggingBehavior": "none",
+  "plugins": {
+    "CapacitorUpdater": {
+      "appId": "com.thaibro.mobile",
+      "autoUpdate": "atBackground"
+    }
+  }
+}
